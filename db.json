@@ -1,0 +1,30 @@
+{
+  "productos": [
+    { "id": 1, "nombre": "Mango Deshidratado (100g)", "precio": 45, "imagen": "/img/catalogo/MangosSecos.webp", "valoracion": 5 },
+    { "id": 2, "nombre": "Piña en Trocitos (100g)", "precio": 40, "imagen": "/img/catalogo/Pina.webp", "valoracion": 4 },
+    { "id": 3, "nombre": "Manzana con Canela (100g)", "precio": 35, "imagen": "/img/catalogo/ManzanaCanela.webp", "valoracion": 5 },
+    { "id": 4, "nombre": "Fresa Deshidratada (100g)", "precio": 60, "imagen": "/img/catalogo/Fresas.webp", "valoracion": 4 },
+    { "id": 5, "nombre": "Plátano Crujiente (100g)", "precio": 30, "imagen": "/img/catalogo/Platanos.webp", "valoracion": 3 },
+    { "id": 6, "nombre": "Arándanos Dulces (100g)", "precio": 55, "imagen": "/img/catalogo/Arendanos.webp", "valoracion": 5 },
+    { "id": 7, "nombre": "Coco Rallado (100g)", "precio": 35, "imagen": "/img/catalogo/Coco.webp", "valoracion": 4 },
+    { "id": 8, "nombre": "Papaya en Tiras (100g)", "precio": 40, "imagen": "/img/catalogo/Papaya.webp", "valoracion": 4 },
+    { "id": 9, "nombre": "Kiwi Deshidratado (100g)", "precio": 65, "imagen": "/img/catalogo/Kiwi.webp", "valoracion": 5 },
+    { "id": 10, "nombre": "Durazno Mitades (100g)", "precio": 50, "imagen": "/img/catalogo/Durazno.webp", "valoracion": 4 },
+    { "id": 11, "nombre": "Higo Seco (100g)", "precio": 70, "imagen": "/img/catalogo/Higo.webp", "valoracion": 5 },
+    { "id": 12, "nombre": "Ciruela Pasa (100g)", "precio": 40, "imagen": "/img/catalogo/CiruelaPasa.webp", "valoracion": 4 },
+    { "id": 13, "nombre": "Pasas Rubias (100g)", "precio": 30, "imagen": "/img/catalogo/PasasRubias.webp", "valoracion": 3 },
+    { "id": 14, "nombre": "Mix Tropical (250g)", "precio": 90, "imagen": "/img/catalogo/MixTropical.webp", "valoracion": 5 },
+    { "id": 15, "nombre": "Mix Frutos Rojos (250g)", "precio": 110, "imagen": "/img/catalogo/MixFrutosRojos.webp", "valoracion": 5 },
+    { "id": 16, "nombre": "Naranja en Rodajas (100g)", "precio": 45, "imagen": "/img/catalogo/Naranjas.webp", "valoracion": 4 },
+    { "id": 17, "nombre": "Limón Deshidratado (100g)", "precio": 45, "imagen": "/img/catalogo/Limon.webp", "valoracion": 3 },
+    { "id": 18, "nombre": "Cereza Deshidratada (100g)", "precio": 85, "imagen": "/img/catalogo/Cereza.webp", "valoracion": 5 },
+    { "id": 19, "nombre": "Uva Pasa Tradicional (100g)", "precio": 25, "imagen": "/img/catalogo/Pasas.webp", "valoracion": 4 },
+    { "id": 20, "nombre": "Pera Deshidratada (100g)", "precio": 55, "imagen": "/img/catalogo/Peras.webp", "valoracion": 4 }
+  ],
+  "faq": [
+    { "id": 1, "pregunta": "¿Tienen tienda física?", "respuesta": "No, por el momento somos un e-commerce operando exclusivamente en línea." },
+    { "id": 2, "pregunta": "¿Cuáles son los horarios de atención?", "respuesta": "De 8:00 am a 4:00 pm, de lunes a viernes." },
+    { "id": 3, "pregunta": "¿Hacen envíos foráneos?", "respuesta": "Sí, hacemos envíos a todo México." },
+    { "id": 4, "pregunta": "¿Los frutos tienen azúcar añadida?", "respuesta": "No, nuestros procesos de deshidratación conservan el dulzor natural de la fruta sin conservadores ni azúcares extra." }
+  ]
+}
