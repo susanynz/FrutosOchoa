@@ -7,8 +7,18 @@ import Tienda from './pages/Tienda';
 import Contacto from './pages/Contacto';
 import Nosotros from './pages/Nosotros';
 import Carrito from './pages/Carrito';
-import Opiniones from './pages/Opiniones'; // 1. IMPORTACIÓN AÑADIDA
+import Opiniones from './pages/Opiniones';
+import Faq from './pages/Faq';
+import Chat from './components/Chat';
+import { FACEBOOK_URL, INSTAGRAM_URL, enlaceWhatsApp } from './config/contacto';
 import './App.css';
+
+// Redes sociales del footer; las URLs se editan en src/config/contacto.js
+const redesSociales = [
+  { nombre: 'Facebook', url: FACEBOOK_URL, icono: <FaFacebook size={24} /> },
+  { nombre: 'Instagram', url: INSTAGRAM_URL, icono: <FaInstagram size={24} /> },
+  { nombre: 'WhatsApp', url: enlaceWhatsApp(), icono: <FaWhatsapp size={24} /> }
+];
 
 function App() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -31,8 +41,9 @@ function App() {
             <Link to="/" onClick={cerrarMenu}>Inicio</Link>
             <Link to="/nosotros" onClick={cerrarMenu}>Quiénes Somos</Link>
             <Link to="/tienda" onClick={cerrarMenu}>Tienda</Link>
+            <Link to="/faq" onClick={cerrarMenu}>Preguntas Frecuentes</Link>
             <Link to="/contacto" onClick={cerrarMenu}>Contacto</Link>
-            <Link to="/opiniones" onClick={cerrarMenu}>Opiniones</Link> {/* 2. LINK AÑADIDO */}
+            <Link to="/opiniones" onClick={cerrarMenu}>Opiniones</Link>
           </div>
         </nav>
 
@@ -41,17 +52,31 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/tienda" element={<Tienda />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/carrito" element={<Carrito />} />
-            <Route path="/opiniones" element={<Opiniones />} /> {/* 3. RUTA AÑADIDA */}
+            <Route path="/opiniones" element={<Opiniones />} />
           </Routes>
         </main>
 
+        {/* Chat disponible en todas las páginas */}
+        <Chat />
+
         <footer className="footer">
+          <p className="social-titulo">Síguenos en redes sociales</p>
           <div className="social-links">
-            <a href="#"><FaFacebook size={24} /></a>
-            <a href="#"><FaInstagram size={24} /></a>
-            <a href="#"><FaWhatsapp size={24} /></a>
+            {redesSociales.map(red => (
+              <a
+                key={red.nombre}
+                href={red.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Frutos Ochoa en ${red.nombre}`}
+                title={red.nombre}
+              >
+                {red.icono}
+              </a>
+            ))}
           </div>
           <p>© 2026 Frutos Deshidratados Ochoa. Todos los derechos reservados.</p>
         </footer>

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.claude/
+FrutosOchoa-main/
+*.log
+.env
+.env.*

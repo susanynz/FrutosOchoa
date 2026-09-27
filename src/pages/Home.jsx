@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Chat from '../components/Chat';
 
 // Arreglo de imágenes para el Reel
 const imagenesReel = [
@@ -15,15 +13,6 @@ const imagenesReel = [
 ];
 
 export default function Home() {
-  const [faqs, setFaqs] = useState([]);
-
-  // Petición asíncrona para traer las Preguntas Frecuentes del servidor simulado
-  useEffect(() => {
-    axios.get('https://api.npoint.io/f335415bfa75d1ceadb3/faq')
-      .then(res => setFaqs(res.data))
-      .catch(err => console.error("Error cargando FAQs:", err));
-  }, []);
-
   return (
     <div>
       <section>
@@ -45,24 +34,12 @@ export default function Home() {
         </Swiper>
       </section>
 
-      <section className="faq-section">
-        <h2>Preguntas Frecuentes</h2>
-        <div>
-          {faqs.length > 0 ? (
-            faqs.map(faq => (
-              <div key={faq.id} className="faq-item">
-                <h4>{faq.pregunta}</h4>
-                <p>{faq.respuesta}</p>
-              </div>
-            ))
-          ) : (
-            <p>Cargando preguntas frecuentes...</p>
-          )}
-        </div>
+      {/* Acceso a la sección de Preguntas Frecuentes */}
+      <section className="faq-section faq-promo">
+        <h2>¿Tienes dudas?</h2>
+        <p>Encuentra respuestas sobre envíos, pagos, pedidos y nuestros productos.</p>
+        <Link to="/faq" className="btn-proceder-compra">Ver preguntas frecuentes</Link>
       </section>
-
-      {/* Componente de Chat */}
-      <Chat />
     </div>
   );
 }
