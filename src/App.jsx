@@ -10,6 +10,7 @@ import Carrito from './pages/Carrito';
 import Opiniones from './pages/Opiniones';
 import Faq from './pages/Faq';
 import Chat from './components/Chat';
+import ValoracionPagina from './components/ValoracionPagina';
 import { FACEBOOK_URL, INSTAGRAM_URL, enlaceWhatsApp } from './config/contacto';
 import './App.css';
 
@@ -57,6 +58,9 @@ function App() {
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/opiniones" element={<Opiniones />} />
           </Routes>
+
+          {/* Valoración con estrellas al final de cada página */}
+          <ValoracionPagina />
         </main>
 
         {/* Chat disponible en todas las páginas */}

@@ -421,7 +421,7 @@ body {
 }
 
 /* Slider de imágenes */
-.swiper {
+.slider-banner {
   width: 100%;
   height: 400px;
   border-radius: 12px;
@@ -431,6 +431,120 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.slider-banner {
+  --swiper-theme-color: var(--blanco);
+  --swiper-pagination-bullet-inactive-color: var(--blanco);
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+.slider-banner .swiper-slide {
+  position: relative;
+}
+
+.slide-texto {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2rem 4rem 3rem;
+  color: var(--blanco);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+}
+
+.slide-texto h2 {
+  margin: 0 0 0.4rem;
+  font-size: 2rem;
+}
+
+.slide-texto p {
+  margin: 0 0 1rem;
+  max-width: 480px;
+}
+
+.slide-texto .btn-proceder-compra {
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+}
+
+/* Carrusel de productos destacados */
+.slider-destacados {
+  --swiper-theme-color: var(--primario);
+  --swiper-navigation-size: 28px;
+  padding: 0.5rem 0;
+}
+
+.destacado-card {
+  display: block;
+  text-decoration: none;
+  color: var(--texto);
+  text-align: center;
+  font-weight: bold;
+}
+
+.destacado-card img {
+  height: 180px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.destacado-card:hover img {
+  transform: scale(1.04);
+}
+
+.destacado-card:hover span {
+  color: var(--primario);
+}
+
+/* Valoración de páginas */
+.valoracion-pagina {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--blanco);
+  border-radius: 12px;
+  border-top: 4px solid var(--secundario);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.valoracion-pregunta {
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.valoracion-estrellas {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.valoracion-estrellas button {
+  background: none;
+  border: none;
+  padding: 0.2rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #E9ECEF;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.valoracion-estrellas button.activa {
+  color: var(--secundario);
+}
+
+.valoracion-estrellas button:not(:disabled):hover {
+  transform: scale(1.15);
+}
+
+.valoracion-estrellas button:disabled {
+  cursor: default;
+}
+
+.valoracion-detalle {
+  margin: 0.5rem 0 0;
+  color: #777;
+  font-size: 0.9rem;
 }
 
 /* Carrito de Compras */
@@ -599,4 +713,40 @@ body {
     display: block;
     font-size: 1.2rem;
   }
+
+  .slider-banner {
+    height: 280px;
+  }
+
+  .slide-texto {
+    padding: 1rem 1.25rem 2.25rem;
+  }
+
+  .slide-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .slide-texto p {
+    font-size: 0.9rem;
+  }
+
+  .slider-banner .swiper-button-prev,
+  .slider-banner .swiper-button-next {
+    display: none;
+  }
+}
+/* Valoración de productos en la tienda */
+.estrellas-producto button {
+  font-size: 1.4rem;
+}
+
+.tarjeta .valoracion-detalle {
+  min-height: 1.2em;
+  font-size: 0.8rem;
+}
+
+/* Producto elegido desde el carrusel de Inicio */
+.tarjeta-elegida {
+  outline: 3px solid var(--secundario);
+  box-shadow: 0 0 0 6px rgba(244, 162, 97, 0.25);
 }
