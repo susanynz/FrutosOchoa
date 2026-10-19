@@ -8,6 +8,7 @@ const PAGINAS = {
   '/': 'Inicio',
   '/nosotros': 'Quiénes Somos',
   '/tienda': 'Tienda',
+  '/galeria': 'Galería',
   '/faq': 'Preguntas Frecuentes',
   '/contacto': 'Contacto',
   '/opiniones': 'Opiniones'

@@ -9,6 +9,7 @@ import Nosotros from './pages/Nosotros';
 import Carrito from './pages/Carrito';
 import Opiniones from './pages/Opiniones';
 import Faq from './pages/Faq';
+import Galeria from './pages/Galeria';
 import Chat from './components/Chat';
 import ValoracionPagina from './components/ValoracionPagina';
 import { FACEBOOK_URL, INSTAGRAM_URL, enlaceWhatsApp } from './config/contacto';
@@ -42,6 +43,7 @@ function App() {
             <Link to="/" onClick={cerrarMenu}>Inicio</Link>
             <Link to="/nosotros" onClick={cerrarMenu}>Quiénes Somos</Link>
             <Link to="/tienda" onClick={cerrarMenu}>Tienda</Link>
+            <Link to="/galeria" onClick={cerrarMenu}>Galería</Link>
             <Link to="/faq" onClick={cerrarMenu}>Preguntas Frecuentes</Link>
             <Link to="/contacto" onClick={cerrarMenu}>Contacto</Link>
             <Link to="/opiniones" onClick={cerrarMenu}>Opiniones</Link>
@@ -53,6 +55,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/tienda" element={<Tienda />} />
+            <Route path="/galeria" element={<Galeria />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/carrito" element={<Carrito />} />
