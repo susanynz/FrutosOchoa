@@ -12,6 +12,7 @@ import Faq from './pages/Faq';
 import Galeria from './pages/Galeria';
 import Chat from './components/Chat';
 import ValoracionPagina from './components/ValoracionPagina';
+import CarritoNav from './components/CarritoNav';
 import { FACEBOOK_URL, INSTAGRAM_URL, enlaceWhatsApp } from './config/contacto';
 import './App.css';
 
@@ -47,6 +48,7 @@ function App() {
             <Link to="/faq" onClick={cerrarMenu}>Preguntas Frecuentes</Link>
             <Link to="/contacto" onClick={cerrarMenu}>Contacto</Link>
             <Link to="/opiniones" onClick={cerrarMenu}>Opiniones</Link>
+            <CarritoNav onClick={cerrarMenu} />
           </div>
         </nav>
 

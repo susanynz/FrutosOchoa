@@ -40,6 +40,22 @@ const destacados = [
   { id: 18, nombre: 'Cereza', imagen: '/img/catalogo/Cereza.webp' }
 ];
 
+// Animaciones de la sección "Del sol a tu mesa"
+const animaciones = [
+  {
+    archivo: 'deshidratado.svg',
+    titulo: 'Deshidratado natural',
+    texto: 'Secamos la fruta a baja temperatura para conservar su sabor, color y nutrientes, sin azúcar añadida.',
+    alt: 'Animación de rodajas de fruta secándose dentro del deshidratador'
+  },
+  {
+    archivo: 'envio.svg',
+    titulo: 'Envíos a todo México',
+    texto: 'Empacamos tu pedido el mismo día y lo enviamos hasta la puerta de tu casa.',
+    alt: 'Animación del camión de Frutos Ochoa recorriendo la carretera'
+  }
+];
+
 export default function Home() {
   return (
     <div>
@@ -96,6 +112,22 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section>
+
+      {/* Animaciones SVG embebidas: archivos en public/animaciones */}
+      <section className="faq-section animaciones-section">
+        <h2>Del sol a tu mesa</h2>
+        <div className="animaciones-grid">
+          {animaciones.map(anim => (
+            <figure key={anim.archivo} className="animacion-card">
+              <img src={`/animaciones/${anim.archivo}`} alt={anim.alt} width="400" height="260" loading="lazy" />
+              <figcaption>
+                <h3>{anim.titulo}</h3>
+                <p>{anim.texto}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </section>
 
       {/* Acceso a la sección de Preguntas Frecuentes */}

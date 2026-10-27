@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Animación "Proceso de deshidratado" - Frutos Ochoa
+     Ilustración vectorial organizada en capas de Inkscape (una por elemento animado)
+     y animada con @keyframes CSS dentro del propio SVG. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     viewBox="0 0 400 260" width="400" height="260" role="img"
+     aria-labelledby="titulo-deshidratado">
+  <title id="titulo-deshidratado">Fruta secándose al sol dentro del deshidratador</title>
+  <sodipodi:namedview id="vista" pagecolor="#ffffff" inkscape:document-units="px"/>
+  <style>
+    .rayos { transform-origin: 330px 52px; animation: girar 14s linear infinite; }
+    .sol-centro { transform-origin: 330px 52px; animation: latido 3s ease-in-out infinite; }
+    .onda { animation: subir 3s ease-in infinite; opacity: 0; }
+    .onda-2 { animation-delay: 1s; }
+    .onda-3 { animation-delay: 2s; }
+    .rodaja { transform-box: fill-box; transform-origin: center; animation: secar 6s ease-in-out infinite; }
+    .rodaja-2 { animation-delay: .4s; }
+    .rodaja-3 { animation-delay: .8s; }
+    .rodaja-4 { animation-delay: 1.2s; }
+    .rodaja-5 { animation-delay: 1.6s; }
+    .rodaja-6 { animation-delay: 2s; }
+    .mercurio { transform-box: fill-box; transform-origin: bottom; animation: calentar 6s ease-in-out infinite; }
+    .foco { animation: parpadeo 1.2s steps(2) infinite; }
+    @keyframes girar { to { transform: rotate(360deg); } }
+    @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    @keyframes subir {
+      0% { transform: translateY(0); opacity: 0; }
+      30% { opacity: .9; }
+      100% { transform: translateY(-38px); opacity: 0; }
+    }
+    @keyframes secar {
+      0%, 15% { transform: scale(1); filter: saturate(1.3) brightness(1.05); }
+      55%, 80% { transform: scale(.78) rotate(-6deg); filter: saturate(.75) brightness(.8); }
+      100% { transform: scale(1); filter: saturate(1.3) brightness(1.05); }
+    }
+    @keyframes calentar { 0%, 100% { transform: scaleY(.35); } 55% { transform: scaleY(1); } }
+    @keyframes parpadeo { 50% { opacity: .25; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <g id="capa-fondo" inkscape:groupmode="layer" inkscape:label="Fondo">
+    <rect width="400" height="260" rx="18" fill="#FFF6E0"/>
+    <path d="M0 214 Q100 196 200 210 T400 204 V242 Q400 260 382 260 H18 Q0 260 0 242Z" fill="#E9C46A" opacity=".55"/>
+  </g>
+
+  <g id="capa-sol" inkscape:groupmode="layer" inkscape:label="Sol">
+    <g class="rayos" fill="#F4A261">
+      <rect x="326" y="6" width="8" height="18" rx="4"/>
+      <rect x="326" y="80" width="8" height="18" rx="4"/>
+      <rect x="284" y="48" width="18" height="8" rx="4"/>
+      <rect x="358" y="48" width="18" height="8" rx="4"/>
+      <rect x="326" y="6" width="8" height="18" rx="4" transform="rotate(45 330 52)"/>
+      <rect x="326" y="80" width="8" height="18" rx="4" transform="rotate(45 330 52)"/>
+      <rect x="326" y="6" width="8" height="18" rx="4" transform="rotate(-45 330 52)"/>
+      <rect x="326" y="80" width="8" height="18" rx="4" transform="rotate(-45 330 52)"/>
+    </g>
+    <circle class="sol-centro" cx="330" cy="52" r="22" fill="#FFD166" stroke="#F4A261" stroke-width="4"/>
+  </g>
+
+  <g id="capa-ondas" inkscape:groupmode="layer" inkscape:label="Ondas de calor" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round">
+    <path class="onda" d="M120 62 q8 -8 0 -16 q-8 -8 0 -16"/>
+    <path class="onda onda-2" d="M180 62 q8 -8 0 -16 q-8 -8 0 -16"/>
+    <path class="onda onda-3" d="M240 62 q8 -8 0 -16 q-8 -8 0 -16"/>
+  </g>
+
+  <g id="capa-deshidratador" inkscape:groupmode="layer" inkscape:label="Deshidratador">
+    <rect x="70" y="70" width="230" height="150" rx="16" fill="#E76F51"/>
+    <rect x="84" y="84" width="202" height="122" rx="10" fill="#FFFFFF"/>
+    <line x1="92" y1="128" x2="278" y2="128" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+    <line x1="92" y1="186" x2="278" y2="186" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+    <circle class="foco" cx="285" cy="77" r="4" fill="#9BE564"/>
+  </g>
+
+  <g id="capa-fruta" inkscape:groupmode="layer" inkscape:label="Rodajas de fruta">
+    <!-- Bandeja superior: naranja, kiwi, naranja -->
+    <g class="rodaja">
+      <circle cx="122" cy="108" r="17" fill="#F8961E" stroke="#F3722C" stroke-width="4"/>
+      <path d="M122 92 V124 M106 108 H138 M111 97 L133 119 M133 97 L111 119" stroke="#FFD8A8" stroke-width="2"/>
+    </g>
+    <g class="rodaja rodaja-2">
+      <circle cx="185" cy="108" r="17" fill="#90BE6D" stroke="#6A994E" stroke-width="4"/>
+      <circle cx="185" cy="108" r="6" fill="#F1FAEE"/>
+      <g fill="#2B2D42"><circle cx="185" cy="97" r="1.6"/><circle cx="195" cy="104" r="1.6"/><circle cx="193" cy="115" r="1.6"/><circle cx="177" cy="115" r="1.6"/><circle cx="175" cy="104" r="1.6"/></g>
+    </g>
+    <g class="rodaja rodaja-3">
+      <circle cx="248" cy="108" r="17" fill="#F8961E" stroke="#F3722C" stroke-width="4"/>
+      <path d="M248 92 V124 M232 108 H264 M237 97 L259 119 M259 97 L237 119" stroke="#FFD8A8" stroke-width="2"/>
+    </g>
+    <!-- Bandeja inferior: mango, fresa, mango -->
+    <g class="rodaja rodaja-4">
+      <rect x="102" y="152" width="40" height="24" rx="12" fill="#FFB703" stroke="#FB8500" stroke-width="3"/>
+    </g>
+    <g class="rodaja rodaja-5">
+      <path d="M185 148 C200 148 204 160 196 172 L185 182 L174 172 C166 160 170 148 185 148Z" fill="#E63946" stroke="#C1121F" stroke-width="3"/>
+      <path d="M178 146 L185 152 L192 146" stroke="#2A9D8F" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+    <g class="rodaja rodaja-6">
+      <rect x="228" y="152" width="40" height="24" rx="12" fill="#FFB703" stroke="#FB8500" stroke-width="3"/>
+    </g>
+  </g>
+
+  <g id="capa-termometro" inkscape:groupmode="layer" inkscape:label="Termómetro">
+    <rect x="322" y="120" width="16" height="84" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="3"/>
+    <rect class="mercurio" x="327" y="130" width="6" height="66" rx="3" fill="#E63946"/>
+    <circle cx="330" cy="208" r="11" fill="#E63946" stroke="#333333" stroke-width="3"/>
+  </g>
+</svg>

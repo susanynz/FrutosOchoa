@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Animación "Envíos a todo México" - Frutos Ochoa
+     Ilustración vectorial organizada en capas de Inkscape y animada con @keyframes CSS. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     viewBox="0 0 400 260" width="400" height="260" role="img"
+     aria-labelledby="titulo-envio">
+  <title id="titulo-envio">Camión de Frutos Ochoa llevando pedidos por la carretera</title>
+  <sodipodi:namedview id="vista" pagecolor="#ffffff" inkscape:document-units="px"/>
+  <style>
+    .nube { animation: nube 9s linear infinite; }
+    .nube-2 { animation-duration: 13s; animation-delay: -6s; }
+    .lineas { animation: carretera .8s linear infinite; }
+    .camion { animation: rebote .4s ease-in-out infinite alternate; }
+    .rueda { transform-box: fill-box; transform-origin: center; animation: girar .6s linear infinite; }
+    .humo { transform-box: fill-box; transform-origin: center; animation: humo 1.4s ease-out infinite; opacity: 0; }
+    .humo-2 { animation-delay: .7s; }
+    .cerro { animation: cerros 18s linear infinite; }
+    @keyframes nube { from { transform: translateX(420px); } to { transform: translateX(-160px); } }
+    @keyframes carretera { to { transform: translateX(-60px); } }
+    @keyframes rebote { to { transform: translateY(-3px); } }
+    @keyframes girar { to { transform: rotate(360deg); } }
+    @keyframes humo {
+      0% { transform: translate(0, 0) scale(.4); opacity: .7; }
+      100% { transform: translate(-34px, -14px) scale(1.4); opacity: 0; }
+    }
+    @keyframes cerros { to { transform: translateX(-400px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <g id="capa-cielo" inkscape:groupmode="layer" inkscape:label="Cielo">
+    <rect width="400" height="260" rx="18" fill="#DFF3F1"/>
+    <g class="nube" fill="#FFFFFF">
+      <ellipse cx="0" cy="50" rx="34" ry="14"/><ellipse cx="22" cy="40" rx="22" ry="16"/>
+    </g>
+    <g class="nube nube-2" fill="#FFFFFF">
+      <ellipse cx="0" cy="88" rx="26" ry="11"/><ellipse cx="16" cy="80" rx="16" ry="12"/>
+    </g>
+  </g>
+
+  <g id="capa-cerros" inkscape:groupmode="layer" inkscape:label="Cerros">
+    <g class="cerro" fill="#A8D5BA">
+      <path d="M0 170 Q60 110 120 170 Q180 120 250 170 Q320 105 400 170 Q460 110 520 170 Q580 120 650 170 Q720 105 800 170 V180 H0Z"/>
+    </g>
+  </g>
+
+  <g id="capa-carretera" inkscape:groupmode="layer" inkscape:label="Carretera">
+    <path d="M0 176 H400 V242 Q400 260 382 260 H18 Q0 260 0 242Z" fill="#5C5C5C"/>
+    <g class="lineas" fill="#FFD166">
+      <rect x="0" y="216" width="34" height="6" rx="3"/><rect x="60" y="216" width="34" height="6" rx="3"/>
+      <rect x="120" y="216" width="34" height="6" rx="3"/><rect x="180" y="216" width="34" height="6" rx="3"/>
+      <rect x="240" y="216" width="34" height="6" rx="3"/><rect x="300" y="216" width="34" height="6" rx="3"/>
+      <rect x="360" y="216" width="34" height="6" rx="3"/><rect x="420" y="216" width="34" height="6" rx="3"/>
+    </g>
+  </g>
+
+  <g id="capa-camion" inkscape:groupmode="layer" inkscape:label="Camión">
+    <circle class="humo" cx="96" cy="182" r="8" fill="#BDBDBD"/>
+    <circle class="humo humo-2" cx="96" cy="182" r="8" fill="#BDBDBD"/>
+    <g class="camion">
+      <!-- Caja de carga con el logotipo -->
+      <rect x="104" y="110" width="140" height="80" rx="8" fill="#E76F51"/>
+      <text x="174" y="146" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">Frutos</text>
+      <text x="174" y="170" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFD166">Ochoa</text>
+      <!-- Cabina -->
+      <path d="M248 130 H284 Q292 130 296 138 L310 162 V190 H248Z" fill="#F4A261"/>
+      <path d="M258 138 H282 L294 160 H258Z" fill="#BDE0FE"/>
+      <rect x="300" y="176" width="12" height="8" rx="2" fill="#FFD166"/>
+    </g>
+    <g class="rueda">
+      <circle cx="140" cy="194" r="18" fill="#2B2D42"/><circle cx="140" cy="194" r="7" fill="#EDEDED"/>
+      <rect x="138" y="178" width="4" height="32" fill="#EDEDED"/><rect x="124" y="192" width="32" height="4" fill="#EDEDED"/>
+    </g>
+    <g class="rueda">
+      <circle cx="276" cy="194" r="18" fill="#2B2D42"/><circle cx="276" cy="194" r="7" fill="#EDEDED"/>
+      <rect x="274" y="178" width="4" height="32" fill="#EDEDED"/><rect x="260" y="192" width="32" height="4" fill="#EDEDED"/>
+    </g>
+  </g>
+</svg>
